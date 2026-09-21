@@ -52,4 +52,3 @@ def find_longest_word(text):
     f=max(s,key=len)
     return f
     pass
-print(find_longest_word("tehas agsgaas"))
