@@ -52,12 +52,12 @@ def find_longest_word(text):
     h=0
     for char in text:
         if char!=' ':
-            s+=1
+            s+=char
         else:
             if h<s:
                 h=s
-            s=0
-    if h<s:
+            s=""
+    if len(h)<len(s):
         h = s
     return h
     pass
