@@ -1,31 +1,63 @@
-# You can remove 'pass' if you written code in the function 
 
 # Exercise 1
 def count_characters(text):
-    # Write your code here
+    f=len(text)
+    return f
     pass
 
 # Exercise 2
 def remove_spaces(text):
-    # Write your code here
+    return text.replace(" ","")
     pass
 
 # Exercise 3
 def count_vowels(text):
-    # Write your code here
+    s=0
+    for i in range(len(text)):
+            if text[i]=="a" or text[i]=="o" or text[i]=="u":
+                s+=1
+            else:
+                if text[i]=="e" or text[i]=="i" or text[i]=="A":
+                    s+=1
+                else:
+                    if text[i]=="E" or text[i]=="I" or text[i]=="O":
+                        s += 1
+                    else:
+                        if text[i]=="U":
+                            s += 1
+    return s
     pass
 
 # Exercise 4
 def replace_vowels(text):
-    # Write your code here
+    new_text=""
+    vowels="aeiouAEIOU"
+    for char in text:
+        if char in vowels:
+            new_text=new_text+"*"
+        else:
+            new_text=new_text+char
     pass
+    return new_text
 
 # Exercise 5
 def count_words(text):
-    # Write your code here
+    new=text.split()
+    return len(new)
     pass
 
 # Exercise 6
 def find_longest_word(text):
-    # Write your code here
+    s=0
+    h=0
+    for char in text:
+        if char!=' ':
+            s+=1
+        else:
+            if h<s:
+                h=s
+            s=0
+    if h<s:
+        h = s
+    return h
     pass
