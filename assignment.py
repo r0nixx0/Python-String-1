@@ -48,7 +48,17 @@ def count_words(text):
 
 # Exercise 6
 def find_longest_word(text):
-    s=text.split()
-    f=max(s,key=len)
-    return f
+    s=""
+    h=""
+    for char in text:
+        if char!=' ':
+            s=s+char
+        else:
+            if len(h)<len(s):
+                h=s
+            s=""
+    if len(h)<len(s):
+        h = s
+    return h
     pass
+print(find_longest_word("hi Hi"))
